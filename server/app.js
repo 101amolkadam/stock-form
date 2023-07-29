@@ -1,5 +1,3 @@
-// DO NOT MODIFY ANYTHING HERE, THE PLACE WHERE YOU NEED TO WRITE CODE IS MARKED CLEARLY BELOW
-
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -32,9 +30,7 @@ app.use(bodyParser.json());
 app.enable("trust proxy");
 
 app.post("/api/fetchStockData", async (req, res) => {
-  // YOUR CODE GOES HERE, PLEASE DO NOT EDIT ANYTHING OUTSIDE THIS FUNCTION
-
-  const baseUrl = 'https://api.polygon.io'
+  const baseUrl = "https://api.polygon.io";
   const date = req.body?.date;
   const stock = req.body?.stock;
   const adjusted = req.body?.adjusted;
@@ -47,11 +43,11 @@ app.post("/api/fetchStockData", async (req, res) => {
       const jsonData = await response.json();
       res.status(200).json(
         {
-          "Open": jsonData.open,
-          "Close": jsonData.close,
-          "High": jsonData.high,
-          "Low": jsonData.low,
-          "Volume": jsonData.volume,
+          Open: jsonData.open,
+          Close: jsonData.close,
+          High: jsonData.high,
+          Low: jsonData.low,
+          Volume: jsonData.volume,
         } || {}
       );
     } else {
