@@ -16,5 +16,5 @@ This application uses [Bun](https://bun.sh/), a fast and secure runtime for Java
 To run the application, follow these steps:
 
 - Go to the `server` folder and start the server by running `bun run start` command. This will launch the server on port 5000.
-- Go to the `vite-client` folder and start the React server by running `bun --bun vite dev` command. This will launch the client on port 5173.
+- Go to the `vite-client` folder and start the React server by running `bunx --bun vite dev` command. This will launch the client on port 5173.
 - Open your browser and navigate to `http://localhost:5173/`. You should see a form where you can enter a stock symbol and a date range to fetch the data. You can also see a chart that shows the historical prices of the selected stock.
